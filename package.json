@@ -1,0 +1,41 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "description": "My delightful Nuxt.js project",
+  "author": "your name",
+  "private": true,
+  "scripts": {
+    "dev": "npm run content && nuxt",
+    "generate": "npm run content && nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "content": "npm run clean && npm run md2json",
+    "md2json": "processmd \"src/contents/markdown/**/*.md\" --preview 160 --stdout --outputDir src/contents/json > src/contents/summary.json",
+    "clean": "rimraf src/contents/json",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --remote=public --cleanup"
+  },
+  "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.7",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/sitemap": "^2.0.0",
+    "markdown-it-attrs": "^3.0.1",
+    "nuxt": "^2.0.0",
+    "prismjs": "^1.17.1"
+  },
+  "devDependencies": {
+    "@mdi/font": "^4.4.95",
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/google-analytics": "^2.2.1",
+    "@nuxtjs/vuetify": "^1.9.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4",
+    "processmd": "^4.5.0",
+    "push-dir": "^0.4.1",
+    "rimraf": "^3.0.0"
+  }
+}
