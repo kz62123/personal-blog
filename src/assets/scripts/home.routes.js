@@ -1,4 +1,4 @@
-const envSet = require(`../../../env.js`)
+const envSet = require(`../../../env/${process.env.NODE_ENV}.js`)
 const { sourceFileArray } = require(`../../contents/summary.json`)
 
 const homes = new Set()

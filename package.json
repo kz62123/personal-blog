@@ -12,7 +12,7 @@
     "content": "npm run clean && npm run md2json",
     "md2json": "processmd \"src/contents/markdown/**/*.md\" --preview 160 --stdout --outputDir src/contents/json > src/contents/summary.json",
     "clean": "rimraf src/contents/json",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --remote=public --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.7",

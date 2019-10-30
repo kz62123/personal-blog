@@ -2,7 +2,7 @@
   <div class="pb-article-card">
     <v-card tile>
       <n-link :to="`/articles/${path}/`">
-        <v-img height="200px" :src="image" lazy-src="/icon.png">
+        <v-img height="200px" :src="`${baseUrl}${image}`">
           <template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular indeterminate color="primary" />
@@ -79,6 +79,10 @@ export default {
     path() {
       const splitedBase = this.base.split(/_|\./)
       return `${splitedBase[0]}/${splitedBase[1]}`
+    },
+
+    baseUrl() {
+      return process.env.baseUrl
     }
   }
 }

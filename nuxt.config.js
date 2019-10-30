@@ -1,7 +1,7 @@
 /*
  ** 環境変数ファイル読み込み
  */
-const envSet = require(`./env.js`)
+const envSet = require(`./env/${process.env.NODE_ENV}.js`)
 
 /*
  ** 動的ルート生成
@@ -15,6 +15,10 @@ export default {
   mode: 'universal',
 
   srcDir: 'src/',
+
+  router: {
+    base: process.env.NODE_ENV === 'production' ? '/<repository-name>/' : '/'
+  },
 
   /*
    ** Headers of the page
@@ -51,7 +55,13 @@ export default {
         content: 'summary_large_image'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: `${envSet.baseUrl}/favicon.ico`
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color

@@ -35,7 +35,7 @@ export default {
         { label: '利用規約', to: '/terms/' },
         {
           label: 'お問い合わせ',
-          href: 'https://www.yoursite.com'
+          href: '<https://Googleフォーム>'
         }
       ]
     }
