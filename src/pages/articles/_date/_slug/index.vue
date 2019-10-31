@@ -1,13 +1,13 @@
 <template>
   <v-row>
-    <v-col md="4" order-md="last">
+    <v-col cols="12" md="4" order-md="last">
       <pb-toc-creator
         :class="$vuetify.breakpoint.mdAndUp ? 'sticky' : ''"
         :text="article.bodyContent"
       />
     </v-col>
 
-    <v-col md="8">
+    <v-col cols="12" md="8">
       <v-sheet :class="$vuetify.breakpoint.mdAndUp ? 'pa-8' : 'pa-2'" flat tile>
         <v-breadcrumbs class="pa-0" :items="breadcrumbs" divider=">" />
 

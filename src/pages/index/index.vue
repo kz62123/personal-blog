@@ -6,18 +6,20 @@
 import PbArticleCardList from '~/components/ArticleCardList'
 
 import ArticleMixin from '~/mixins/ArticleMixin'
+import HeadMixin from '~/mixins/HeadMixin'
 
 export default {
   components: {
     PbArticleCardList
   },
 
-  mixins: [ArticleMixin],
+  mixins: [ArticleMixin, HeadMixin],
 
-  head() {
+  data() {
     return {
-      title: process.env.title,
-      titleTemplate: ''
+      head: {
+        title: 'ホーム'
+      }
     }
   }
 }

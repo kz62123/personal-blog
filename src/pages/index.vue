@@ -1,10 +1,10 @@
 <template>
   <v-row>
-    <v-col md="8">
+    <v-col cols="12" md="8">
       <nuxt-child />
     </v-col>
 
-    <v-col md="4">
+    <v-col cols="12" md="4">
       <pb-side-links-card
         class="pb-4"
         title="カテゴリ一覧"
