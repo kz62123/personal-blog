@@ -17,7 +17,7 @@ export default {
   srcDir: 'src/',
 
   router: {
-    base: process.env.NODE_ENV === 'production' ? '/<repository-name>/' : '/'
+    base: process.env.NODE_ENV === 'production' ? '/【repository-name】/' : '/'
   },
 
   /*
@@ -85,7 +85,7 @@ export default {
     [
       '@nuxtjs/google-analytics',
       {
-        id: '<UA-xxxxxxxxx-x>'
+        id: '【UA-xxxxxxxxx-x】'
       }
     ]
   ],
