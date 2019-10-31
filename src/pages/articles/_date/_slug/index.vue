@@ -38,9 +38,9 @@
           </v-btn>
         </div>
 
-        <v-divider class="my-8" />
+        <v-img class="my-4" :src="article.image" :alt="article.title" />
 
-        <pb-markdown-viewer class="my-8" :content="article.bodyContent" />
+        <pb-markdown-viewer class="my-4" :content="article.bodyContent" />
 
         <pb-share-btns :title="article.title" :hashtags="article.tags" />
       </v-sheet>

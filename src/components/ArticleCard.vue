@@ -2,7 +2,7 @@
   <div class="pb-article-card">
     <v-card tile>
       <n-link :to="`/articles/${path}/`">
-        <v-img height="200px" :src="`${baseUrl}${image}`">
+        <v-img height="200px" :src="`${baseUrl}${image}`" :alt="title">
           <template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular indeterminate color="primary" />
