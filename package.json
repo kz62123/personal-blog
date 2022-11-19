@@ -19,7 +19,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.0.0",
     "markdown-it-attrs": "^3.0.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
